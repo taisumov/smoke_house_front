@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>КОПТИСАМ</title>
+    <link rel="stylesheet" href="/pages/deliver/style.css" />
+    <!-- Импорт стилей для навигации -->
+    <link rel="stylesheet" href="/source/nav-style.css" />
+    <!-- Конец импорта стилей для навигации -->
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <div class="logo__logo">
+          <a href="/">
+            <img src="/img/logo.png" alt="" />
+          </a>
+        </div>
+        <div class="logo__videoicon">
+          <img src="/img/nav-video-icon.svg" alt="" />
+        </div>
+      </div>
+
+      <input type="checkbox" id="checkbox1" class="checkbox1 visuallyHidden" />
+
+      <div class="burger-menu">
+        <label for="checkbox1" class="label">
+          <div class="hamburger">
+            <span class="bar bar1"></span>
+            <span class="bar bar2"></span>
+            <span class="bar bar3"></span>
+            <span class="bar bar4"></span>
+          </div>
+        </label>
+      </div>
+
+      <div class="main">
+        <div class="main-nav">
+          <a href="/pages/about" class="main-nav__item"
+            ><div id="about" class="link">О нас</div></a
+          >
+          <div class="catalog-container">
+            <a href="/pages/catalog/?category=all" class="main-nav__item"
+              ><div id="catalog" class="link">Каталог</div></a
+            >
+            <div class="catalog-more">+</div>
+            <div class="catalog-dropdown">
+              <a
+                href="/pages/catalog/?category=Коптильни"
+                class="catalog-dropdown__link"
+                ><div class="catalog-dropdown__text">Коптильни</div></a
+              >
+              <a
+                href="/pages/catalog/?category=Дымогенераторы"
+                class="catalog-dropdown__link"
+                ><div class="catalog-dropdown__text">Дымогенераторы</div></a
+              >
+              <a
+                href="/pages/catalog/?category=Парогенераторы"
+                class="catalog-dropdown__link"
+                ><div class="catalog-dropdown__text">Парогенераторы</div></a
+              >
+              <a
+                href="/pages/catalog/?category=Сушильные шкафы"
+                class="catalog-dropdown__link"
+                ><div class="catalog-dropdown__text">Сушильные шкафы</div></a
+              >
+              <a
+                href="/pages/catalog/?category=Доптовары"
+                class="catalog-dropdown__link"
+                ><div class="catalog-dropdown__text">Доп.товары</div></a
+              >
+              <a
+                href="/pages/catalog/?category=Пароконвектоматы"
+                class="catalog-dropdown__link"
+                ><div class="catalog-dropdown__text">Пароконвектоматы</div></a
+              >
+              <div class="close-categories">Назад</div>
+            </div>
+          </div>
+          <a href="/pages/technology" class="main-nav__item"
+            ><div id="technology" class="link">Технологии</div></a
+          >
+        </div>
+
+        <div class="main-nav">
+          <a href="/pages/deliver" class="main-nav__item"
+            ><div id="delivery" class="link">Доставка</div></a
+          >
+          <a href="/pages/reviews" class="main-nav__item"
+            ><div id="reviews" class="link">Отзывы</div></a
+          >
+        </div>
+
+        <div class="order">
+          <button class="order__btn">Заказать</button>
+        </div>
+      </div>
+      <div class="modal-container modal-container--hidden">
+        <div class="modal">
+          <div class="modal__exit">
+            <div class="exit-icon">
+              <img src="/img/close.png" alt="" />
+            </div>
+          </div>
+          <div class="modal__header">Обратный звонок</div>
+          <div class="modal__form">
+            <!-- <input class="modal-input" type="text" placeholder="Фамилия">
+                      <input class="modal-input" type="text" placeholder="Имя">
+                      <input class="modal-input" type="text" placeholder="Отчество">
+                      <input class="modal-input" type="tel" placeholder="Телефон"> -->
+          </div>
+          <div class="order-container">
+            <div class="order-container__btn">Заказать</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="page">
+      <img src="/img/main/background.png" alt="" class="lightBackground" />
+      <img src="/img/main/background.png" alt="" class="lightBackground" />
+      <img src="/img/main/blurBackground.png" alt="" class="lightBackground" />
+      <section class="deliverContainer">
+        <div class="deliverContainer__titleBlock">
+          <div class="title">ДОСТАВКА</div>
+          <div class="imageContainer">
+            <img
+              src="/img/deliver/SVG/car.svg"
+              alt=""
+              class="imageContainer__car"
+            />
+          </div>
+        </div>
+        <div class="deliverContainer__delivers">
+          <div class="circle"></div>
+        </div>
+      </section>
+    </main>
+    <!-- Импорт скриптов для навигации -->
+
+    <!-- Конец импорта скриптов для навигации -->
+    <footer class="footer">
+      <div class="logo">
+        <img src="/img/logo-footer.png" alt="" />
+      </div>
+      <div class="footer-container">
+        <div class="footer-item">
+          <p class="footer-item_title">Адрес:</p>
+          <div class="footer-item_content">
+            <div class="item">Санкт-Петербург, ул.Корабельная, 6к4</div>
+          </div>
+        </div>
+        <div class="footer-item">
+          <p class="footer-item_title">Email:</p>
+          <div class="footer-item_content">
+            <div class="item">islam.taisumov10@gmail.com</div>
+            <div class="item">islam.taisumov10@gmail.com</div>
+          </div>
+        </div>
+        <div class="footer-item">
+          <p class="footer-item_title">Отдел продаж:</p>
+          <div class="footer-item_content">
+            <div class="item">+7(909)585-48-88</div>
+            <div class="item">+7(909)585-48-88</div>
+          </div>
+        </div>
+        <div class="footer-item">
+          <p class="footer-item_title">Отдел техподдержки:</p>
+          <div class="footer-item_content">
+            <div class="item">+7(909)585-48-88</div>
+            <div class="item">+7(909)585-48-88</div>
+          </div>
+        </div>
+        <div class="footer-item">
+          <p class="footer-item_title">Режим работы:</p>
+          <div class="footer-item_content">
+            <div class="item">ПН-ПТ 10:00 - 22:00</div>
+            <div class="item">СБ-ВС 12:00 - 20:00</div>
+          </div>
+        </div>
+      </div>
+      <div class="links">
+        <div class="links__item">
+          <a href="#">
+            <img src="/img/footer-tg.png" alt="" />
+          </a>
+        </div>
+        <div class="links__item">
+          <a href="#">
+            <img src="/img/footer-wa.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/nav-script.js"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="./deliverData.js"></script>
+  </body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>КОПТИСАМ</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Импорт стилей для навигации -->
+    <link rel="stylesheet" href="/source/nav-style.css" />
+    <!-- Конец импорта стилей для навигации -->
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <div class="logo__logo">
+          <a href="/">
+            <img src="/img/logo.png" alt="" />
+          </a>
+        </div>
+        <div class="logo__videoicon">
+          <img src="/img/nav-video-icon.svg" alt="" />
+        </div>
+      </div>
+
+      <input type="checkbox" id="checkbox1" class="checkbox1 visuallyHidden" />
+
+      <div class="burger-menu">
+        <label for="checkbox1" class="label">
+          <div class="hamburger">
+            <span class="bar bar1"></span>
+            <span class="bar bar2"></span>
+            <span class="bar bar3"></span>
+            <span class="bar bar4"></span>
+          </div>
+        </label>
+      </div>
+
+      <div class="main">
+        <div class="main-nav">
+          <a href="/pages/about" class="main-nav__item"
+            ><div id="about" class="link">О нас</div></a
+          >
+          <div class="catalog-container">
+            <a href="/pages/catalog/?category=all" class="main-nav__item"
+              ><div id="catalog" class="link">Каталог</div></a
+            >
+            <div class="catalog-more">+</div>
+            <div class="catalog-dropdown">
+              <a
+                href="/pages/catalog/?category=Коптильни"
+                class="catalog-dropdown__link"
+                ><div class="catalog-dropdown__text">Коптильни</div></a
+              >
+              <a
+                href="/pages/catalog/?category=Дымогенераторы"
+                class="catalog-dropdown__link"
+                ><div class="catalog-dropdown__text">Дымогенераторы</div></a
+              >
+              <a
+                href="/pages/catalog/?category=Парогенераторы"
+                class="catalog-dropdown__link"
+                ><div class="catalog-dropdown__text">Парогенераторы</div></a
+              >
+              <a
+                href="/pages/catalog/?category=Сушильные шкафы"
+                class="catalog-dropdown__link"
+                ><div class="catalog-dropdown__text">Сушильные шкафы</div></a
+              >
+              <a
+                href="/pages/catalog/?category=Доптовары"
+                class="catalog-dropdown__link"
+                ><div class="catalog-dropdown__text">Доп.товары</div></a
+              >
+              <a
+                href="/pages/catalog/?category=Пароконвектоматы"
+                class="catalog-dropdown__link"
+                ><div class="catalog-dropdown__text">Пароконвектоматы</div></a
+              >
+              <div class="close-categories">Назад</div>
+            </div>
+          </div>
+          <a href="/pages/technology" class="main-nav__item"
+            ><div id="technology" class="link">Технологии</div></a
+          >
+        </div>
+
+        <div class="main-nav">
+          <a href="/pages/deliver" class="main-nav__item"
+            ><div id="delivery" class="link">Доставка</div></a
+          >
+          <a href="/pages/reviews" class="main-nav__item"
+            ><div id="reviews" class="link">Отзывы</div></a
+          >
+        </div>
+
+        <div class="order">
+          <button class="order__btn">Заказать</button>
+        </div>
+      </div>
+      <div class="modal-container modal-container--hidden">
+        <div class="modal">
+          <div class="modal__exit">
+            <div class="exit-icon">
+              <img src="/img/close.png" alt="" />
+            </div>
+          </div>
+          <div class="modal__header">Обратный звонок</div>
+          <div class="modal__form">
+            <!-- <input class="modal-input" type="text" placeholder="Фамилия">
+                      <input class="modal-input" type="text" placeholder="Имя">
+                      <input class="modal-input" type="text" placeholder="Отчество">
+                      <input class="modal-input" type="tel" placeholder="Телефон"> -->
+          </div>
+          <div class="order-container">
+            <div class="order-container__btn">Заказать</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="page">
+      <img src="/img/main/background.png" alt="" class="lightBackground" />
+      <img src="/img/main/background.png" alt="" class="lightBackground" />
+      <img src="/img/main/blurBackground.png" alt="" class="lightBackground" />
+      <section class="advantages">
+        <div class="advantages__titleBlock">
+          <div class="titleTextBlock">
+            <div class="titleTextBlock__container">
+              <div class="titleTextBlock__container__title">ТЕХНОЛОГИЯ</div>
+              <div class="titleTextBlock__container__subTitle">
+                Используем лучшие технологии и самые классные
+              </div>
+            </div>
+
+            <div class="titleTextBlock__imgBlock">
+              <img
+                src="/img/technology/SVG/fabric.svg"
+                alt=""
+                class="backImage"
+              />
+              <img
+                src="/img/technology/SVG/wheel.svg"
+                alt=""
+                class="backImage"
+              />
+              <img
+                src="/img/technology/SVG/wheel.svg"
+                alt=""
+                class="backImage"
+              />
+            </div>
+          </div>
+          <div class="titleImageBlock"></div>
+        </div>
+        <div class="advantages__container">
+          <div class="advantageBlock">
+            <div class="advantageBlock__textContainer">
+              <div class="advantageBlock__textContainer__title">
+                <span>Технология</span>
+                <img
+                  src="/img/technology/SVG/wheel.svg"
+                  alt=""
+                  class="advantageBlock__textContainer__title__img"
+                />
+              </div>
+              <div class="advantageBlock__textContainer__text">
+                Цена от производителя Не требуют дополнительного оборудования
+                для просушки Энергоэффективные — потребляют за три часа копчения
+                при Цена от производителя Не требуют дополнительного
+                оборудования для шкиЭнергоэффективные — потребляют за три часа
+                копчения при +80 не более 3кВт +80 не более 3кВт
+              </div>
+            </div>
+            <div class="advantageBlock__imageContainer">
+              <img
+                src="/img/main/333.jpg"
+                alt=""
+                class="advantageBlock__imageContainer__img"
+              />
+            </div>
+          </div>
+          <div class="advantageBlock">
+            <div class="advantageBlock__textContainer">
+              <div class="advantageBlock__textContainer__title">
+                <span>Технология</span>
+                <img
+                  src="/img/technology/SVG/wheel.svg"
+                  alt=""
+                  class="advantageBlock__textContainer__title__img"
+                />
+              </div>
+              <div class="advantageBlock__textContainer__text">
+                Цена от производителя Не требуют дополнительного оборудования
+                для просушки Энергоэффективные — потребляют за три часа копчения
+                при Цена от производителя Не требуют дополнительного
+                оборудования для шкиЭнергоэффективные — потребляют за три часа
+                копчения при +80 не более 3кВт +80 не более 3кВт
+              </div>
+            </div>
+            <div class="advantageBlock__imageContainer">
+              <img
+                src="/img/main/333.jpg"
+                alt=""
+                class="advantageBlock__imageContainer__img"
+              />
+            </div>
+          </div>
+          <div class="advantageBlock">
+            <div class="advantageBlock__textContainer">
+              <div class="advantageBlock__textContainer__title">
+                <span>Технология</span>
+                <img
+                  src="/img/technology/SVG/wheel.svg"
+                  alt=""
+                  class="advantageBlock__textContainer__title__img"
+                />
+              </div>
+              <div class="advantageBlock__textContainer__text">
+                Цена от производителя Не требуют дополнительного оборудования
+                для просушки Энергоэффективные — потребляют за три часа копчения
+                при Цена от производителя Не требуют дополнительного
+                оборудования для шкиЭнергоэффективные — потребляют за три часа
+                копчения при +80 не более 3кВт +80 не более 3кВт
+              </div>
+            </div>
+            <div class="advantageBlock__imageContainer">
+              <img
+                src="/img/main/333.jpg"
+                alt=""
+                class="advantageBlock__imageContainer__img"
+              />
+            </div>
+          </div>
+        </div>
+        <iframe
+          class="youtube"
+          src="https://www.youtube.com/embed/qOO7eK4JlqA"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="logo">
+        <img src="/img/logo-footer.png" alt="" />
+      </div>
+      <div class="footer-container">
+        <div class="footer-item">
+          <p class="footer-item_title">Адрес:</p>
+          <div class="footer-item_content">
+            <div class="item">Санкт-Петербург, ул.Корабельная, 6к4</div>
+          </div>
+        </div>
+        <div class="footer-item">
+          <p class="footer-item_title">Email:</p>
+          <div class="footer-item_content">
+            <div class="item">islam.taisumov10@gmail.com</div>
+            <div class="item">islam.taisumov10@gmail.com</div>
+          </div>
+        </div>
+        <div class="footer-item">
+          <p class="footer-item_title">Отдел продаж:</p>
+          <div class="footer-item_content">
+            <div class="item">+7(909)585-48-88</div>
+            <div class="item">+7(909)585-48-88</div>
+          </div>
+        </div>
+        <div class="footer-item">
+          <p class="footer-item_title">Отдел техподдержки:</p>
+          <div class="footer-item_content">
+            <div class="item">+7(909)585-48-88</div>
+            <div class="item">+7(909)585-48-88</div>
+          </div>
+        </div>
+        <div class="footer-item">
+          <p class="footer-item_title">Режим работы:</p>
+          <div class="footer-item_content">
+            <div class="item">ПН-ПТ 10:00 - 22:00</div>
+            <div class="item">СБ-ВС 12:00 - 20:00</div>
+          </div>
+        </div>
+      </div>
+      <div class="links">
+        <div class="links__item">
+          <a href="#">
+            <img src="../../img/footer-tg.png" alt="" />
+          </a>
+        </div>
+        <div class="links__item">
+          <a href="#">
+            <img src="../../img/footer-wa.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="./loadTechnology.js"></script>
+    <script src="/js/nav-script.js"></script>
+  </body>
+</html>
