@@ -23,5 +23,5 @@ jobs:
       - name: Deploy on server
         run: |
           ssh -i $SSH_KEY_PATH $SSH_USER@$SSH_HOST "mkdir -p ~/project/data/shop"
-          rsync -e "ssh -i $SSH_KEY_PATH" --archive --compress --delete --exclude-form={'.idea', '.git', '.github', '.gitignore', 'README.md'} . $SSH_USER@$SSH_HOST:~/project/data/shop
+          rsync -e "ssh -i $SSH_KEY_PATH" --archive --compress --delete --exclude-form={'.idea','.git','.github','.gitignore','README.md'} . $SSH_USER@$SSH_HOST:~/project/data/shop
           ssh -i $SSH_KEY_PATH $SSH_USER@$SSH_HOST "cd ~/project && docker compose restart"
