@@ -15,6 +15,8 @@ async function loadData() {
   let data = await loadHeader();
   console.log(data);
 
+  if (!data) return;
+
   let headerContainer = document
     .querySelector(".header")
     .querySelector(".headerContainer");
@@ -40,33 +42,38 @@ async function loadData() {
   data = await loadAdvantages();
   let advantagesContainer = document.querySelector(".advantages__container");
   advantagesContainer.innerHTML = "";
+
   data.map((advantage) => {
     let advantageBlock = document.createElement("div");
     advantageBlock.className = "advantageBlock";
-    advantageBlock.innerHTML = `<div class="advantageBlock__textContainer">
-    <div class="advantageBlock__textContainer__title">
+    advantageBlock.innerHTML = `
+    <div class="advantageBlock__textContainer">
+      <div class="advantageBlock__textContainer__title">
+      </div>
+      <div class="advantageBlock__textContainer__text">
+      </div>
     </div>
-    <div class="advantageBlock__textContainer__text">
-    </div>
-  </div>
-  <div class="advantageBlock__imageContainer">
-    <img
-      src="/img/main/SVG/wheel.svg"
-      alt=""
-      class="advantageBlock__imageContainer__back"
-    />
-    <img
-      src=""
-      alt=""
-      class="advantageBlock__imageContainer__img"
-    />
-  </div>`;
+    <div class="advantageBlock__imageContainer">
+      <img
+        src="/img/main/SVG/wheel.svg"
+        alt=""
+        class="advantageBlock__imageContainer__back"
+      />
+      <img
+        src=""
+        alt=""
+        class="advantageBlock__imageContainer__img"
+      />
+    </div>`;
+
     advantageBlock.querySelector(
       ".advantageBlock__textContainer__title"
     ).innerHTML = advantage["title"];
+
     advantageBlock.querySelector(
       ".advantageBlock__textContainer__text"
     ).innerHTML = advantage["description"];
+
     advantageBlock.querySelector(".advantageBlock__imageContainer__img").src =
       baseUrl + "/media/" + advantage["main_photo"];
     advantagesContainer.appendChild(advantageBlock);

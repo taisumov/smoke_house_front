@@ -8,7 +8,6 @@ async function loadData() {
   });
 
   await host.get("/tech/").then((data) => {
-    document.title = data.data.name + " - Коптисам";
     console.log(data["data"]["techs"]);
 
     let container = document.querySelector(".advantages__container");
