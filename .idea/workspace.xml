@@ -4,100 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d57be86-1ae4-4fdd-b7f1-c8490f8c0c56" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/GothamPro-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/GothamPro-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/GothamPro.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/GothamPro_Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/Raleway-ExtraBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/Raleway-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/catalog/dry.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/catalog/extra.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/catalog/koptilni.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/catalog/smoke.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/catalog/steam.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/deliver/SVG/car.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/deliver/SVG/cards.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/doc1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/footer-tg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/footer-wa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/left-arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo-footer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/main/333.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/main/SVG/1x/Ресурс 1-100.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/main/SVG/1x/Ресурс 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/main/SVG/backImageAdvantage.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/main/SVG/fire.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/main/SVG/headerLogo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/main/SVG/headerLogo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/main/SVG/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/main/SVG/salesText.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/main/SVG/wheel.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/main/SVG/youtube.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/main/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/main/blurBackground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/nav-video-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/news-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/reason-item-black.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/reason-item.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/reviews/1x/Ресурс 3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/reviews/SVG/forScreen.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/reviews/SVG/forTextArea.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/reviews/SVG/heart.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/reviews/SVG/reviewBack.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/reviews/SVG/reviewIcon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/reviews/SVG/star.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/reviews/screen.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/technology/SVG/fabric.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/technology/SVG/wheel.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/nav-script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/about/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/about/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/about/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/about/style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/about/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/catalog/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/catalog/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/catalog/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/catalog/style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/catalog/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/deliver/deliverData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/deliver/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/deliver/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/deliver/style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/deliver/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/item/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/item/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/item/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/item/style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/item/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/reviews/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/reviews/reviewData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/reviews/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/reviews/style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/reviews/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/technology/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/technology/loadTechnology.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/technology/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/technology/style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/technology/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/nav-style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/nav-style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/nav-style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/scss/_nullstyle.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/scss/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/scss/style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/scss/style.scss" afterDir="false" />
+    <list default="true" id="2d57be86-1ae4-4fdd-b7f1-c8490f8c0c56" name="Changes" comment="delete ngrok">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,16 +20,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\work\smoke_house_front\img" />
@@ -138,10 +50,77 @@
       <option name="presentableId" value="Default" />
       <updated>1678271018044</updated>
       <workItem from="1678271019196" duration="243000" />
+      <workItem from="1678345677859" duration="2517000" />
     </task>
+    <task id="LOCAL-00001" summary="1234">
+      <created>1678274215818</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678274215818</updated>
+    </task>
+    <task id="LOCAL-00002" summary="1234">
+      <created>1678308142502</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678308142502</updated>
+    </task>
+    <task id="LOCAL-00003" summary="1234">
+      <created>1678308241603</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678308241603</updated>
+    </task>
+    <task id="LOCAL-00004" summary="1234">
+      <created>1678308327025</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678308327025</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1234">
+      <created>1678308411469</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678308411469</updated>
+    </task>
+    <task id="LOCAL-00006" summary="1234">
+      <created>1678308498262</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678308498262</updated>
+    </task>
+    <task id="LOCAL-00007" summary="delete ngrok">
+      <created>1678345845799</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678345845799</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1234" />
+    <MESSAGE value="delete ngrok" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete ngrok" />
   </component>
 </project>
