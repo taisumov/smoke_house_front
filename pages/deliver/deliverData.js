@@ -3,7 +3,7 @@ function shuffle(array) {
 }
 
 async function loadData() {
-  const baseUrl = "https://76d3-83-68-50-244.eu.ngrok.io";
+  const baseUrl = "";
   const url = baseUrl + "/api";
 
   const host = axios.create({

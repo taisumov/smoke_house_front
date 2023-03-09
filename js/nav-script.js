@@ -2,7 +2,7 @@
   let url = `${window.location.href}`.split("/");
   let currentPage = url[url.indexOf("pages") + 1];
   let parent = document.querySelector(".modal__form");
-  const baseUrl = "https://76d3-83-68-50-244.eu.ngrok.io";
+  const baseUrl = "";
   const urlCurrent = baseUrl + "/api";
 
   let form = {};
