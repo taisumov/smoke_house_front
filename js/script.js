@@ -15,9 +15,8 @@ async function loadData() {
   let data = await loadHeader();
   console.log(data);
 
-  if (!data) return;
-
-  let headerContainer = document
+  if (data) {
+    let headerContainer = document
     .querySelector(".header")
     .querySelector(".headerContainer");
 
@@ -104,6 +103,7 @@ async function loadData() {
     .addEventListener("click", () => {
       sendEmail();
     });
+  }
 }
 
 async function loadHeader() {
