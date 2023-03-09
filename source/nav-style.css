@@ -274,7 +274,6 @@ body {
     color: #fec601;
   }
   .navbar .main .main-nav .catalog-container {
-    height: -moz-min-content;
     height: min-content;
     display: flex;
     align-items: center;
@@ -448,12 +447,9 @@ body {
   }
 }
 .navbar .modal-container .modal .order-container__btn {
-  height: -moz-min-content;
   height: min-content;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   padding: 15px;
   display: flex;
   justify-content: center;
@@ -463,4 +459,4 @@ body {
   text-transform: uppercase;
   border: 1px solid #fec601;
   border-radius: 10px;
-}/*# sourceMappingURL=nav-style.css.map */
+}
