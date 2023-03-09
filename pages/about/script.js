@@ -120,19 +120,19 @@ const swiper = new Swiper(".swiper", {
 
 let mediaParent = document.querySelector(".swiper-wrapper");
 
-// mediaImages.map((item) => {
-//   let el = document.createElement("div");
-//   el.className = "swiper-slide";
-//   el.innerHTML = `
-//         <div class="news-image">
-//             <img src="${item.img}" alt="">
-//         </div>
-//         <div class="news-title">
-//             ${item.title}
-//         </div>
-//     `;
-//   mediaParent.appendChild(el);
-// });
+mediaImages.map((item) => {
+  let el = document.createElement("div");
+  el.className = "swiper-slide";
+  el.innerHTML = `
+        <div class="news-image">
+            <img src="${item.img}" alt="">
+        </div>
+        <div class="news-title">
+            ${item.title}
+        </div>
+    `;
+  mediaParent.appendChild(el);
+});
 
 (function aboutUs() {
   let title = document.querySelector(".head__text-content");

@@ -27,8 +27,6 @@
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -421,7 +419,8 @@ body {
     width: 100%;
   }
   .container__main .head__media-item img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     height: 100%;
     width: 100%;
   }
@@ -437,7 +436,8 @@ body {
     grid-area: left;
   }
   .container__main .head__media-item:nth-child(1) img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     height: 100%;
     width: 100%;
   }
@@ -445,7 +445,8 @@ body {
     grid-area: cent-up;
   }
   .container__main .head__media-item:nth-child(2) img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 100%;
     height: 100%;
   }
@@ -453,7 +454,8 @@ body {
     grid-area: cent-down;
   }
   .container__main .head__media-item:nth-child(3) img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 100%;
     height: 100%;
   }
@@ -461,7 +463,8 @@ body {
     grid-area: right;
   }
   .container__main .head__media-item:nth-child(4) img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     height: 100%;
     width: 100%;
   }
@@ -534,7 +537,8 @@ body {
 .container__main .reasons__items .reason-item__icon img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .container__main .reasons__items .reason-item__header {
   font-size: 20px;
@@ -578,6 +582,7 @@ body {
   border: 2px solid #fec601;
   border-radius: 10px;
   padding: 20px;
+  width: -moz-min-content;
   width: min-content;
   max-height: 100%;
 }
@@ -614,7 +619,8 @@ body {
   box-shadow: 0 0 20px red;
 }
 .container__main .docs__images-image img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   height: 100%;
   max-width: 300px;
 }
@@ -640,6 +646,7 @@ body {
 .container__main .media__header-text {
   margin-right: 30px;
   text-transform: uppercase;
+  height: -moz-min-content;
   height: min-content;
   display: flex;
   justify-content: center;
@@ -653,6 +660,7 @@ body {
 @media (max-width: 701px) {
   .container__main .media__header-text {
     padding: 20px 60px;
+    width: -moz-fit-content;
     width: fit-content;
     font-size: 20px;
     margin: 0;
@@ -677,8 +685,11 @@ body {
   padding: 0 30px;
 }
 .container__main .media__container-slider .swiper-slide {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   padding: 50px 0;
+  width: -moz-min-content;
   width: min-content;
   display: flex;
   align-items: center;
@@ -687,12 +698,14 @@ body {
 }
 .container__main .media__container-slider .swiper-slide .news-image {
   border-radius: 30px;
+  width: -moz-min-content;
   width: min-content;
   box-shadow: 0 0 20px #eb431f;
   overflow: hidden;
 }
 .container__main .media__container-slider .swiper-slide .news-image img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 300px;
   height: 300px;
 }
@@ -712,29 +725,29 @@ body {
   background-color: #eb431f;
   height: 2px;
 }
-.container__main .media__container .video-main {
+.container__main .media__container-video .video-main {
   margin: 50px 0 150px 0;
   width: 100%;
   display: flex;
   gap: 40px;
 }
-.container__main .media__container .video-main__video {
+.container__main .media__container-video .video-main__video {
   width: 100%;
   height: 25vw;
   border-radius: 30px;
   overflow: hidden;
   box-shadow: 0 0 20px red;
 }
-.container__main .media__container .video-main__video .youtube {
+.container__main .media__container-video .video-main__video .youtube {
   width: 100%;
   height: 100%;
 }
 @media (max-width: 1199.98px) {
-  .container__main .media__container .video-main {
+  .container__main .media__container-video .video-main {
     flex-direction: column;
     padding: 0 30px;
   }
-  .container__main .media__container .video-main__video {
+  .container__main .media__container-video .video-main__video {
     height: 50vw;
   }
 }
@@ -754,6 +767,7 @@ body {
   border: 2px solid #fec601;
   border-radius: 10px;
   padding: 20px;
+  width: -moz-min-content;
   width: min-content;
   max-height: 100%;
   width: 100%;
@@ -761,6 +775,7 @@ body {
 }
 @media (min-width: 1199.98px) {
   .container__main .prod__header {
+    width: -moz-fit-content;
     width: fit-content;
     flex-direction: column;
     grid-template-columns: 1fr;
@@ -823,4 +838,4 @@ body {
   display: grid;
   grid-gap: 15px;
   grid-auto-flow: column;
-}
+}/*# sourceMappingURL=style.css.map */
