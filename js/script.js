@@ -114,7 +114,7 @@ async function loadSales() {
 
 async function loadAdvantages() {
   return await host.get("/advantages/").then((data) => {
-    return data["data"];
+    return data["data"]["advantages"];
   });
 }
 
