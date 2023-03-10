@@ -7,13 +7,7 @@ const host = axios.create({
 });
 
 async function loadData() {
-  // await host.get("/feedback/").then((data) => {
-  //   document.title = data.data.name + " - Коптисам";
-  //   console.log(data["data"]);
-  // });
-
   let data = await loadHeader();
-
   if (data) {
     let headerContainer = document
     .querySelector(".header")
