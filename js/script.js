@@ -108,35 +108,30 @@ async function loadData() {
 
 async function loadHeader() {
   return await host.get("/header/").then((data) => {
-    document.title = data.data.name + " - Коптисам";
     return data["data"];
   });
 }
 
 async function loadSales() {
   return await host.get("/promo/").then((data) => {
-    document.title = data.data.name + " - Коптисам";
-    return data["data"];
+    return data["data"]["promo"];
   });
 }
 
 async function loadAdvantages() {
   return await host.get("/advantages/").then((data) => {
-    document.title = data.data.name + " - Коптисам";
     return data["data"];
   });
 }
 
 async function loadVideo() {
   return await host.get("/video/main/").then((data) => {
-    document.title = data.data.name + " - Коптисам";
     return data["data"];
   });
 }
 
 async function loadForm() {
   return await host.get("/forms/get/").then((data) => {
-    document.title = data.data.name + " - Коптисам";
     return data["data"];
   });
 }
