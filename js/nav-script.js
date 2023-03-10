@@ -116,7 +116,6 @@
   host
     .get("/footer")
     .then((data) => {
-      console.log(data.data, "test");
       let emailContainer = [
         ...footer.querySelectorAll(".footer-item_content"),
       ][1];

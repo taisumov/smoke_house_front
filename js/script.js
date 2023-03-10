@@ -7,14 +7,7 @@ const host = axios.create({
 });
 
 async function loadData() {
-  // await host.get("/feedback/").then((data) => {
-  //   document.title = data.data.name + " - Коптисам";
-  //   console.log(data["data"]);
-  // });
-
   let data = await loadHeader();
-  console.log(data);
-
   if (data) {
     let headerContainer = document
     .querySelector(".header")
@@ -29,6 +22,7 @@ async function loadData() {
   data = await loadSales();
   let saleContainer = document.querySelector(".salesList");
   saleContainer.innerHTML = "";
+  console.log('promo', data)
   data.map((sale) => {
     let saleBox = document.createElement("div");
     saleBox.className = "sale";
@@ -82,7 +76,6 @@ async function loadData() {
   document.querySelector(".advantages").querySelector(".youtube").src = data;
 
   data = await loadForm();
-  console.log(data);
 
   let formContainer = document
     .querySelector(".contactWithUs")
@@ -108,35 +101,31 @@ async function loadData() {
 
 async function loadHeader() {
   return await host.get("/header/").then((data) => {
-    document.title = data.data.name + " - Коптисам";
     return data["data"];
   });
 }
 
 async function loadSales() {
   return await host.get("/promo/").then((data) => {
-    document.title = data.data.name + " - Коптисам";
-    return data["data"];
+    console.log(data.data.promo)
+    return data["data"]["promo"];
   });
 }
 
 async function loadAdvantages() {
   return await host.get("/advantages/").then((data) => {
-    document.title = data.data.name + " - Коптисам";
     return data["data"];
   });
 }
 
 async function loadVideo() {
   return await host.get("/video/main/").then((data) => {
-    document.title = data.data.name + " - Коптисам";
     return data["data"];
   });
 }
 
 async function loadForm() {
   return await host.get("/forms/get/").then((data) => {
-    document.title = data.data.name + " - Коптисам";
     return data["data"];
   });
 }
