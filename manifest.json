@@ -6,7 +6,7 @@
   "display": "browser",
   "orientation": "portrait",
   "scope": "/",
-  "start_url": "/",
+  "start_url": "https://wellskincare.ru/",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
