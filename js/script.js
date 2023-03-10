@@ -29,6 +29,7 @@ async function loadData() {
   data = await loadSales();
   let saleContainer = document.querySelector(".salesList");
   saleContainer.innerHTML = "";
+  console.log('promo', data)
   data.map((sale) => {
     let saleBox = document.createElement("div");
     saleBox.className = "sale";
