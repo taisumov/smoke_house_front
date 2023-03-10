@@ -13,7 +13,6 @@ async function loadData() {
   // });
 
   let data = await loadHeader();
-  console.log(data);
 
   if (data) {
     let headerContainer = document
@@ -83,7 +82,6 @@ async function loadData() {
   document.querySelector(".advantages").querySelector(".youtube").src = data;
 
   data = await loadForm();
-  console.log(data);
 
   let formContainer = document
     .querySelector(".contactWithUs")
@@ -115,6 +113,7 @@ async function loadHeader() {
 
 async function loadSales() {
   return await host.get("/promo/").then((data) => {
+    console.log(data.data.promo)
     return data["data"]["promo"];
   });
 }
