@@ -68,7 +68,7 @@ let mediaImages = [
   },
 ];
 
-const baseUrl = "";
+const baseUrl = "https://admin.wellskincare.ru";
 const url = baseUrl + "/api";
 
 const host = axios.create({
@@ -120,19 +120,19 @@ const swiper = new Swiper(".swiper", {
 
 let mediaParent = document.querySelector(".swiper-wrapper");
 
-mediaImages.map((item) => {
-  let el = document.createElement("div");
-  el.className = "swiper-slide";
-  el.innerHTML = `
-        <div class="news-image">
-            <img src="${item.img}" alt="">
-        </div>
-        <div class="news-title">
-            ${item.title}
-        </div>
-    `;
-  mediaParent.appendChild(el);
-});
+// mediaImages.map((item) => {
+//   let el = document.createElement("div");
+//   el.className = "swiper-slide";
+//   el.innerHTML = `
+//         <div class="news-image">
+//             <img src="${item.img}" alt="">
+//         </div>
+//         <div class="news-title">
+//             ${item.title}
+//         </div>
+//     `;
+//   mediaParent.appendChild(el);
+// });
 
 (function aboutUs() {
   let title = document.querySelector(".head__text-content");
@@ -154,8 +154,6 @@ mediaImages.map((item) => {
   let reasons = document.querySelectorAll(".reason-item");
 
   host.get("/reasons").then((data) => {
-    console.log(data, "test");
-
     [...reasons].map((reason, index) => {
       reason.querySelector(".reason-item__header").innerText =
         data.data[index].title;
@@ -173,6 +171,31 @@ mediaImages.map((item) => {
       reason.onmouseleave = function () {
         reason.style.background = `transparent`;
       };
+    });
+  });
+})();
+
+(function massmedia() {
+  let imageMassmediaContainer = document
+    .querySelector(".media__container-slider")
+    .querySelector(".swiper")
+    .querySelector(".swiper-wrapper");
+  imageMassmediaContainer.innerHTML = "";
+
+  host.get("/massmedia").then((data) => {
+    console.log(data.data.photo, "test");
+    data.data.photo.map((photoImg) => {
+      let imgContainer = document.createElement("div");
+      imgContainer.className = "swiper-slide";
+
+      imgContainer.innerHTML = `
+      <div class="news-image">
+        <img src="${baseUrl + "/media/" + photoImg.src}" alt="massmedia">
+      </div>
+      <div class="news-title">${photoImg.title}</div>
+      `;
+
+      imageMassmediaContainer.appendChild(imgContainer);
     });
   });
 })();
