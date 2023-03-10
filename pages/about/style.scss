@@ -494,7 +494,7 @@ body {
         margin-bottom: 80px;
 
         @media (min-width: 1199.98px) {
-          grid-template-columns: repeat(3, minmax(350px, 1fr));
+          grid-template-columns: repeat(3, minmax(400px, 1fr));
           grid-template-rows: repeat(2, 1fr);
           .reason-item {
             &:nth-child(1),
@@ -592,7 +592,7 @@ body {
 
         .header-container {
           text-transform: uppercase;
-          font-size: 45px;
+          font-size: 38px;
           color: #fec601;
           border: 2px solid #fec601;
           border-radius: 10px;
@@ -737,7 +737,11 @@ body {
             width: 100%;
             display: flex;
             gap: 40px;
-  
+            .swiperVideo {
+              height: 100%;
+              margin-top: 60px;
+              padding: 0 30px;
+            }
             &__video {
               width: 100%;
               height: 25vw;
@@ -749,7 +753,7 @@ body {
                 height: 100%;
               }
             }
-  
+
             @media (max-width: 1199.98px) {
               flex-direction: column;
               padding: 0 30px;
@@ -765,6 +769,47 @@ body {
     .prod {
       display: flex;
       gap: 40px;
+      .head__media {
+        display: grid;
+        grid-template:
+          "a c e"
+          "a c e"
+          "a d e"
+          "b d f"
+          "b d f"
+          "b d f";
+        grid-template-columns: 1fr 1fr 1fr;
+        @media (max-width: 600px) {
+          display: flex;
+          flex-direction: column;
+        }
+        &-item {
+          width: 100%;
+          &:nth-child(1) {
+            grid-area: a;
+          }
+          &:nth-child(2) {
+            grid-area: b;
+          }
+          &:nth-child(3) {
+            grid-area: c;
+          }
+          &:nth-child(4) {
+            grid-area: d;
+          }
+          &:nth-child(5) {
+            grid-area: e;
+          }
+          &:nth-child(6) {
+            grid-area: f;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
 
       @media (max-width: 1199.98px) {
         flex-direction: column;
@@ -772,14 +817,13 @@ body {
 
       &__header {
         text-transform: uppercase;
-        font-size: 45px;
+        font-size: 38px;
         color: #fec601;
         border: 2px solid #fec601;
         border-radius: 10px;
         padding: 20px;
         width: min-content;
         max-height: 100%;
-
         width: 100%;
         text-align: center;
 

@@ -1,74 +1,4 @@
-let reasons = [
-  {
-    title: "Крутость",
-    description: "ЯЛЯЛЯЛЯЛЯЛЯ Л ЯЛЯЛЯЛЯЛЯЛЯЛЯЛ ЯЛЯЛЯЛЯЛ ЯЛЯЛЯЛЯ",
-    color: "#A03472",
-    img: "",
-  },
-  {
-    title: "Крутость",
-    description: "ЯЛЯЛЯЛЯЛЯЛЯ Л ЯЛЯЛЯЛЯЛЯЛЯЛЯЛ ЯЛЯЛЯЛЯЛ ЯЛЯЛЯЛЯ",
-    color: "#D87093",
-    img: "",
-  },
-  {
-    title: "Крутость",
-    description: "ЯЛЯЛЯЛЯЛЯЛЯ Л ЯЛЯЛЯЛЯЛЯЛЯЛЯЛ ЯЛЯЛЯЛЯЛ ЯЛЯЛЯЛЯ",
-    color: "#A0522D",
-    img: "",
-  },
-  {
-    title: "Крутость",
-    description: "ЯЛЯЛЯЛЯЛЯЛЯ Л ЯЛЯЛЯЛЯЛЯЛЯЛЯЛ ЯЛЯЛЯЛЯЛ ЯЛЯЛЯЛЯ",
-    color: "#007BA7",
-    img: "",
-  },
-  {
-    title: "Крутость",
-    description: "ЯЛЯЛЯЛЯЛЯЛЯ Л ЯЛЯЛЯЛЯЛЯЛЯЛЯЛ ЯЛЯЛЯЛЯЛ ЯЛЯЛЯЛЯ",
-    color: "#BEBD7F",
-    img: "",
-  },
-  {
-    title: "Крутость",
-    description: "ЯЛЯЛЯЛЯЛЯЛЯ Л ЯЛЯЛЯЛЯЛЯЛЯЛЯЛ ЯЛЯЛЯЛЯЛ ЯЛЯЛЯЛЯ",
-    color: "#2F353B",
-    img: "",
-  },
-];
-
-let mediaImages = [
-  {
-    img: "https://sun9-88.userapi.com/impg/fXzrIxJ7vE02dI-uaI80hpkQPdb-Ilyo3JMFFg/NYD6dJcbaQg.jpg?size=750x750&quality=95&sign=712fd51462bee03a4429a3b5fea844c0&type=album",
-    title: "Комсомольская правда 1",
-  },
-  {
-    img: "https://sun9-88.userapi.com/impg/fXzrIxJ7vE02dI-uaI80hpkQPdb-Ilyo3JMFFg/NYD6dJcbaQg.jpg?size=750x750&quality=95&sign=712fd51462bee03a4429a3b5fea844c0&type=album",
-    title: "Комсомольская правда 2",
-  },
-  {
-    img: "https://sun9-88.userapi.com/impg/fXzrIxJ7vE02dI-uaI80hpkQPdb-Ilyo3JMFFg/NYD6dJcbaQg.jpg?size=750x750&quality=95&sign=712fd51462bee03a4429a3b5fea844c0&type=album",
-    title: "Комсомольская правда 3",
-  },
-  {
-    img: "https://sun9-88.userapi.com/impg/fXzrIxJ7vE02dI-uaI80hpkQPdb-Ilyo3JMFFg/NYD6dJcbaQg.jpg?size=750x750&quality=95&sign=712fd51462bee03a4429a3b5fea844c0&type=album",
-    title: "Комсомольская правда 5",
-  },
-  {
-    img: "https://sun9-88.userapi.com/impg/fXzrIxJ7vE02dI-uaI80hpkQPdb-Ilyo3JMFFg/NYD6dJcbaQg.jpg?size=750x750&quality=95&sign=712fd51462bee03a4429a3b5fea844c0&type=album",
-    title: "Комсомольская правда 5",
-  },
-  {
-    img: "https://sun9-88.userapi.com/impg/fXzrIxJ7vE02dI-uaI80hpkQPdb-Ilyo3JMFFg/NYD6dJcbaQg.jpg?size=750x750&quality=95&sign=712fd51462bee03a4429a3b5fea844c0&type=album",
-    title: "Комсомольская правда 5",
-  },
-  {
-    img: "https://sun9-88.userapi.com/impg/fXzrIxJ7vE02dI-uaI80hpkQPdb-Ilyo3JMFFg/NYD6dJcbaQg.jpg?size=750x750&quality=95&sign=712fd51462bee03a4429a3b5fea844c0&type=album",
-    title: "Комсомольская правда 5",
-  },
-];
-
-const baseUrl = "https://admin.wellskincare.ru";
+const baseUrl = "";
 const url = baseUrl + "/api";
 
 const host = axios.create({
@@ -86,16 +16,16 @@ let headersReasons = Array.from(
 );
 let textReasons = Array.from(document.querySelectorAll(".reason-item__text"));
 
-reasons.map((item, index) => {
-  rules = document.createTextNode(
-    `.reason-item:nth-child(${index + 1}):hover {background-color: ${
-      item.color
-    };}`
-  );
-  if (style.styleSheet) style.styleSheet.cssText = rules.nodeValue;
-  else style.appendChild(rules);
-  head.appendChild(style);
-});
+// reasons.map((item, index) => {
+//   rules = document.createTextNode(
+//     `.reason-item:nth-child(${index + 1}):hover {background-color: ${
+//       item.color
+//     };}`
+//   );
+//   if (style.styleSheet) style.styleSheet.cssText = rules.nodeValue;
+//   else style.appendChild(rules);
+//   head.appendChild(style);
+// });
 
 const swiper = new Swiper(".swiper", {
   observer: true,
@@ -117,6 +47,27 @@ const swiper = new Swiper(".swiper", {
     },
   },
 });
+
+// const swiperVideo = new Swiper(".swiperVideo", {
+//   observer: true,
+//   observeParents: true,
+//   spaceBetween: 60,
+//   speed: 400,
+//   slidesPerView: 3,
+//   draggable: true,
+//   scrollbar: {
+//     el: ".swiper-scrollbar",
+//     draggable: true,
+//   },
+//   breakpoints: {
+//     0: {
+//       centeredSlides: true,
+//     },
+//     500: {
+//       centeredSlides: false,
+//     },
+//   },
+// });
 
 let mediaParent = document.querySelector(".swiper-wrapper");
 
@@ -183,7 +134,6 @@ let mediaParent = document.querySelector(".swiper-wrapper");
   imageMassmediaContainer.innerHTML = "";
 
   host.get("/massmedia").then((data) => {
-    console.log(data.data.photo, "test");
     data.data.photo.map((photoImg) => {
       let imgContainer = document.createElement("div");
       imgContainer.className = "swiper-slide";
@@ -196,6 +146,31 @@ let mediaParent = document.querySelector(".swiper-wrapper");
       `;
 
       imageMassmediaContainer.appendChild(imgContainer);
+    });
+
+    let videoElements = document
+      .querySelector(".media__container-video")
+      .querySelectorAll(".video-main__video");
+
+    [...videoElements].map((vid, index) => {
+      vid.innerHTML = `<iframe class="youtube" src="${data.data.video[index].src}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>`;
+    });
+  });
+})();
+
+(function prod() {
+  let prods = document
+    .querySelector(".prod")
+    .querySelectorAll(".head__media-item");
+
+  host.get("/prodinfo").then((data) => {
+    console.log(data.data, "test");
+
+    [...prods].map((prod, index) => {
+      prod.innerHTML = `<img
+        src="${baseUrl + "/media/" + data.data[index].src}"
+        alt=""
+      />`;
     });
   });
 })();
