@@ -190,7 +190,7 @@ async function loadAdvantages() {
 
 async function loadVideo() {
   return await host.get("/video/main/").then((data) => {
-    return data["data"];
+    return data["data"]["video"];
   });
 }
 
