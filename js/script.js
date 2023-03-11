@@ -92,14 +92,6 @@ async function loadData() {
           </div>
         </div>
       </div>
-      <iframe
-        class="youtube"
-        src=""
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
     `
     let advantagesContainer = document.querySelector(".advantages__container");
     advantagesContainer.innerHTML = "";
@@ -138,7 +130,18 @@ async function loadData() {
   // Видео
   data = await loadVideo();
   if (data) {
-    document.querySelector(".advantages").querySelector(".youtube").src = data;
+    document.querySelector(".advantages").innerHTML = document.querySelector(".advantages").innerHTML + 
+    `
+      <iframe
+            class="youtube"
+            src="${data}"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+      ></iframe>
+    `
+    // document.querySelector(".advantages").querySelector(".youtube").src = data;
   }
 
   // Форма
