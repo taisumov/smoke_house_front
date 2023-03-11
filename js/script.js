@@ -129,7 +129,7 @@ async function loadData() {
 
   // Видео
   data = await loadVideo();
-  if (data) {
+  if (data?.names.length) {
     document.querySelector(".advantages").innerHTML = document.querySelector(".advantages").innerHTML + 
     `
       <iframe
@@ -141,12 +141,19 @@ async function loadData() {
             allowfullscreen
       ></iframe>
     `
-    // document.querySelector(".advantages").querySelector(".youtube").src = data;
   }
 
   // Форма
   data = await loadForm();
   if (data) {
+    document.querySelector('.contactWithUs').innerHTML = 
+    `
+      <div class="contactWithUs__title">ОБРАТНЫЙ ЗВОНОК</div>
+        <div class="contactWithUs__formContainer">
+          <div class="formBlock"></div>
+        </div>
+      <div class="contactWithUs__orderButton"><span>Заказать</span></div>
+    `
     let formContainer = document
       .querySelector(".contactWithUs")
       .querySelector(".formBlock");
