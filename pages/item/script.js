@@ -104,7 +104,7 @@ const setFeatures = (features) => {
 
     let mainText = document.createElement("div");
     mainText.setAttribute("class", "left__content");
-    mainText.innerHTML = feature.main_text;
+    mainText.innerHTML = feature.main_text.replace('&nbsp;', ' ');
 
     left.appendChild(header);
     left.appendChild(mainText);
