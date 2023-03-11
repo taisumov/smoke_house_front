@@ -133,7 +133,6 @@ const renderCategories = (category, items) => {
 
 const fetchData = async () => {
   await host.post("item/all/get/category", { category }).then((data) => {
-    if (data.data === null) document.location.href="/";
     renderCategories(category, data.data);
   });
 };

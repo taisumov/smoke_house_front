@@ -148,6 +148,7 @@ const updatePhotos = async (links) => {
 
 const fetchData = async () => {
   await host.get("/item/get/" + slug).then((data) => {
+    if (data.data === null) document.location.href="/";
     document.title = data.data.name + " - Коптисам";
     console.log(data.data);
     setName(data.data.name);
