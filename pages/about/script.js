@@ -90,7 +90,7 @@ let mediaParent = document.querySelector(".swiper-wrapper");
   let imageContainer = document.querySelector(".head__media");
 
   host.get("/about").then((data) => {
-    title.innerText = data.data.text;
+    title.innerHTML = data.data.text;
 
     let images = imageContainer.querySelectorAll(".head__media-item");
     [...images].map((image, index) => {
@@ -106,10 +106,10 @@ let mediaParent = document.querySelector(".swiper-wrapper");
 
   host.get("/reasons").then((data) => {
     [...reasons].map((reason, index) => {
-      reason.querySelector(".reason-item__header").innerText =
+      reason.querySelector(".reason-item__header").innerHTML =
         data.data[index].title;
 
-      reason.querySelector(".reason-item__text").innerText =
+      reason.querySelector(".reason-item__text").innerHTML =
         data.data[index].description;
 
       reason.querySelector(".reason-item__icon").innerHTML = `<img src=${
