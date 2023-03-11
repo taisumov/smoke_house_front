@@ -7,6 +7,7 @@ const host = axios.create({
 });
 
 async function loadData() {
+  // Шапка
   let data = await loadHeader();
   if (data) {
     let headerContainer = document
@@ -25,69 +26,83 @@ async function loadData() {
     `
 
     headerContainer.querySelector(".headerTitle").innerHTML = data["title"];
-    headerContainer.querySelector(".headerDescription").innerHTML =
-      data["description"];
-    headerContainer.querySelector(".logo").src =
-      baseUrl + "/media/" + data["image"];
+    headerContainer.querySelector(".headerDescription").innerHTML = data["description"];
+    headerContainer.querySelector(".logo").src = baseUrl + "/media/" + data["image"];
+  }
 
-    data = await loadSales();
+  // Акции
+  data = await loadSales();
+  if (data) {
+    document.querySelector('.sales').innerHTML = 
+    `
+      <div class="salesContainer">
+        <div class="salesImage">
+          <img src="/img/main/SVG/salesText.svg" alt="" />
+        </div>
+        <div class="salesList"></div>
+      </div>
+    `
     let saleContainer = document.querySelector(".salesList");
     saleContainer.innerHTML = "";
-    console.log('promo', data)
     data.map((sale) => {
       let saleBox = document.createElement("div");
       saleBox.className = "sale";
-      saleBox.innerHTML = `<img class="sale__fire" src="/img/main/SVG/fire.svg" alt="" />
-      <div class="sale__text"></div>`;
+      saleBox.innerHTML = 
+      `
+        <img class="sale__fire" src="/img/main/SVG/fire.svg" alt="" />
+        <div class="sale__text"></div>
+      `
       saleBox.querySelector(".sale__text").innerHTML = sale;
       saleContainer.appendChild(saleBox);
     });
+  }
 
-    data = await loadAdvantages();
+  // Преимущества
+  data = await loadAdvantages();
+  if (data) {
     let advantagesContainer = document.querySelector(".advantages__container");
     advantagesContainer.innerHTML = "";
 
     data.map((advantage) => {
       let advantageBlock = document.createElement("div");
       advantageBlock.className = "advantageBlock";
-      advantageBlock.innerHTML = `
-      <div class="advantageBlock__textContainer">
-        <div class="advantageBlock__textContainer__title">
+      advantageBlock.innerHTML = 
+      `
+        <div class="advantageBlock__textContainer">
+          <div class="advantageBlock__textContainer__title">
+          </div>
+          <div class="advantageBlock__textContainer__text">
+          </div>
         </div>
-        <div class="advantageBlock__textContainer__text">
+        <div class="advantageBlock__imageContainer">
+          <img
+            src="/img/main/SVG/wheel.svg"
+            alt=""
+            class="advantageBlock__imageContainer__back"
+          />
+          <img
+            src=""
+            alt=""
+            class="advantageBlock__imageContainer__img"
+          />
         </div>
-      </div>
-      <div class="advantageBlock__imageContainer">
-        <img
-          src="/img/main/SVG/wheel.svg"
-          alt=""
-          class="advantageBlock__imageContainer__back"
-        />
-        <img
-          src=""
-          alt=""
-          class="advantageBlock__imageContainer__img"
-        />
-      </div>`;
-
-      advantageBlock.querySelector(
-        ".advantageBlock__textContainer__title"
-      ).innerHTML = advantage["title"];
-
-      advantageBlock.querySelector(
-        ".advantageBlock__textContainer__text"
-      ).innerHTML = advantage["description"];
-
-      advantageBlock.querySelector(".advantageBlock__imageContainer__img").src =
-        baseUrl + "/media/" + advantage["main_photo"];
+      `
+      advantageBlock.querySelector(".advantageBlock__textContainer__title").innerHTML = advantage["title"];
+      advantageBlock.querySelector(".advantageBlock__textContainer__text").innerHTML = advantage["description"];
+      advantageBlock.querySelector(".advantageBlock__imageContainer__img").src = baseUrl + "/media/" + advantage["main_photo"];
       advantagesContainer.appendChild(advantageBlock);
     });
+  }
 
-    data = await loadVideo();
+  // Видео
+  data = await loadVideo();
+  if (data) {
     document.querySelector(".advantages").querySelector(".youtube").src = data;
+  }
 
-    data = await loadForm();
-
+  // Форма
+  data = await loadForm();
+  if (data) {
     let formContainer = document
       .querySelector(".contactWithUs")
       .querySelector(".formBlock");
@@ -106,7 +121,7 @@ async function loadData() {
       .querySelector(".contactWithUs__orderButton")
       .addEventListener("click", () => {
         sendEmail();
-      });
+    });
   }
 }
 
