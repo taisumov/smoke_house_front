@@ -104,7 +104,7 @@ const setFeatures = (features) => {
 
     let mainText = document.createElement("div");
     mainText.setAttribute("class", "left__content");
-    mainText.innerHTML = feature.main_text;
+    mainText.innerHTML = feature.main_text.replace('&nbsp;', ' ');
 
     left.appendChild(header);
     left.appendChild(mainText);
@@ -146,8 +146,13 @@ const updatePhotos = async (links) => {
   });
 };
 
+const setPrice = (price) => {
+  document.querySelector('.order__price').innerHTML = `${price} руб.`
+}
+
 const fetchData = async () => {
   await host.get("/item/get/" + slug).then((data) => {
+    if (data.data === null) document.location.href="/";
     document.title = data.data.name + " - Коптисам";
     console.log(data.data);
     setName(data.data.name);
@@ -156,6 +161,7 @@ const fetchData = async () => {
     setFeatures(data.data.features);
     setMaterial(data.data.material);
     setVideo(data.data.video);
+    setPrice(data.data.price);
   });
 };
 

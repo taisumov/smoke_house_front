@@ -28,8 +28,6 @@
 }
 
 *, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -155,6 +153,7 @@ header .mainContainer .menuItem {
 
 .page {
   margin-top: 120px;
+  height: -moz-max-content;
   height: max-content;
 }
 .page .reviews {
@@ -198,6 +197,7 @@ header .mainContainer .menuItem {
   color: #fec601;
   font-family: "GothamPro";
   font-size: 24px;
+  width: -moz-max-content;
   width: max-content;
   text-align: center;
   border: 2px solid #fec601;
@@ -289,7 +289,8 @@ header .mainContainer .menuItem {
   width: 100%;
   height: 100%;
   border-radius: 30px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .page .reviews__video {
   position: relative;
@@ -311,7 +312,8 @@ header .mainContainer .menuItem {
   position: absolute;
   width: 15vw;
   height: 15vw;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   top: -90px;
   left: 25px;
   z-index: 2;
@@ -375,17 +377,8 @@ header .mainContainer .menuItem {
   background: #fff;
   color: #000;
   /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
   align-items: center;
 }
 .page .reviews__video .swiper .swiper-slide iframe {
@@ -396,7 +389,8 @@ header .mainContainer .menuItem {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .page .reviews__textReview {
   display: flex;
@@ -430,7 +424,8 @@ header .mainContainer .menuItem {
 .page .reviews__textReview .textReview__block__hearts .heart {
   width: 90px;
   height: 90px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .page .reviews__textReview .textReview__block:first-child .textReview__block__hearts {
   display: flex;
@@ -546,7 +541,8 @@ header .mainContainer .menuItem {
   right: -80px;
   width: 160px;
   height: 160px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 1000px) {
   .page .reviews__textReview .textReview__block .textReview__block__left .textBlock--left__star {
@@ -597,9 +593,6 @@ header .mainContainer .menuItem {
     align-items: center;
   }
 }
-.footer .logo {
-  margin-right: 40px;
-}
 .footer .logo img {
   height: 80px;
 }
@@ -631,4 +624,4 @@ header .mainContainer .menuItem {
   display: grid;
   grid-gap: 15px;
   grid-auto-flow: column;
-}
+}/*# sourceMappingURL=style.css.map */

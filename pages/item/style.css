@@ -25,8 +25,6 @@
 }
 
 *, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -143,6 +141,7 @@ body {
   .container .item__name p {
     font-size: 30px;
     padding: 15px 20px;
+    width: -moz-max-content;
     width: max-content;
   }
 }
@@ -250,6 +249,7 @@ body {
   .container .item .info .properties__header {
     writing-mode: horizontal-tb;
     transform: scale(1);
+    height: -moz-min-content;
     height: min-content;
     margin: 0 0 50px 0;
   }
@@ -258,6 +258,7 @@ body {
   .container .item .info .properties__header {
     writing-mode: horizontal-tb;
     transform: scale(1);
+    height: -moz-min-content;
     height: min-content;
     font-size: 20px;
     margin: 0 0 50px 0;
@@ -298,6 +299,7 @@ body {
 }
 .container .item .info .properties__content .prop__container .prop-item {
   margin: 10px 10px;
+  width: -moz-min-content;
   width: min-content;
   text-transform: lowercase;
   height: 36px;
@@ -334,7 +336,8 @@ body {
   color: #FFC501;
   border: 2px solid #FFC501;
   border-radius: 10px;
-  width: min-content;
+  width: 100%;
+  max-width: 100%;
   text-align: center;
   padding: 15px;
   text-transform: uppercase;
@@ -342,6 +345,8 @@ body {
 @media (max-width: 600px) {
   .container .item .info .extra-info .material__header {
     font-size: 20px;
+    width: -moz-min-content;
+    width: min-content;
   }
 }
 .container .item .info .extra-info .material__content {
@@ -380,6 +385,7 @@ body {
 }
 .container .item .info .extra-info .feature-container .feature .left__content {
   font-size: 14px;
+  word-break: break-word;
 }
 .container .item .info .extra-info .feature-container .feature__circle {
   font-family: "Raleway ExtraBold", serif;
@@ -430,6 +436,7 @@ body {
 @media (max-width: 600px) {
   .container .item .order__btn {
     font-size: 30px;
+    width: -moz-min-content;
     width: min-content;
     padding: 20px 20px;
   }
@@ -438,14 +445,6 @@ body {
   -webkit-mask-image: linear-gradient(-75deg, rgba(255, 255, 255, 0.6) 30%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0.6) 70%);
   -webkit-mask-size: 250%;
   animation: wave 2s infinite;
-}
-@-webkit-keyframes wave {
-  from {
-    -webkit-mask-position: 150%;
-  }
-  to {
-    -webkit-mask-position: -50%;
-  }
 }
 
 .footer {
@@ -461,9 +460,6 @@ body {
     flex-direction: column;
     align-items: center;
   }
-}
-.footer .logo {
-  margin-right: 40px;
 }
 .footer .logo img {
   height: 80px;
@@ -496,4 +492,4 @@ body {
   display: grid;
   grid-gap: 15px;
   grid-auto-flow: column;
-}
+}/*# sourceMappingURL=style.css.map */

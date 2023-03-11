@@ -8,8 +8,6 @@ async function loadData() {
   });
 
   await host.get("/feedback/").then((data) => {
-    document.title = data.data.name + " - Коптисам";
-    console.log(data["data"]);
 
     let imageDOM = document.querySelector(".reviews__screenshots");
     imageDOM.innerHTML = "";
