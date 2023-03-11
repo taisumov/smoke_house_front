@@ -60,7 +60,7 @@ async function loadData() {
   // Преимущества
   data = await loadAdvantages();
   if (data) {
-    document.querySelector('.sales').innerHTML = 
+    document.querySelector('.advantages').innerHTML = 
     `
       <div class="advantages__title">ПРЕИМУЩЕСТВА</div>
       <div class="advantages__container">
