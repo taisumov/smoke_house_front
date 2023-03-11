@@ -12,7 +12,6 @@ async function loadData() {
   });
 
   await host.get("/delivery/").then((data) => {
-    document.title = data.data.name + " - Коптисам";
     shuffle(data["data"]);
     console.log(data["data"]);
 
