@@ -129,7 +129,7 @@ async function loadData() {
 
   // Видео
   data = await loadVideo();
-  if (data?.names.length) {
+  if (data) {
     document.querySelector(".advantages").innerHTML = document.querySelector(".advantages").innerHTML + 
     `
       <iframe
@@ -145,7 +145,7 @@ async function loadData() {
 
   // Форма
   data = await loadForm();
-  if (data) {
+  if (data?.names.length) {
     document.querySelector('.contactWithUs').innerHTML = 
     `
       <div class="contactWithUs__title">ОБРАТНЫЙ ЗВОНОК</div>
