@@ -60,6 +60,47 @@ async function loadData() {
   // Преимущества
   data = await loadAdvantages();
   if (data) {
+    document.querySelector('.sales').innerHTML = 
+    `
+      <div class="advantages__title">ПРЕИМУЩЕСТВА</div>
+      <div class="advantages__container">
+        <div class="advantageBlock">
+          <div class="advantageBlock__textContainer">
+            <div class="advantageBlock__textContainer__title"></div>
+            <div class="advantageBlock__textContainer__text"></div>
+          </div>
+          <div class="advantageBlock__imageContainer">
+            <img src="" alt="" class="advantageBlock__imageContainer__img"/>
+          </div>
+        </div>
+        <div class="advantageBlock">
+          <div class="advantageBlock__textContainer">
+            <div class="advantageBlock__textContainer__title"></div>
+            <div class="advantageBlock__textContainer__text"></div>
+          </div>
+          <div class="advantageBlock__imageContainer">
+            <img src="" alt="" class="advantageBlock__imageContainer__img"/>
+          </div>
+        </div>
+        <div class="advantageBlock">
+          <div class="advantageBlock__textContainer">
+            <div class="advantageBlock__textContainer__title"></div>
+            <div class="advantageBlock__textContainer__text"></div>
+          </div>
+          <div class="advantageBlock__imageContainer">
+            <img src="" alt="" class="advantageBlock__imageContainer__img"/>
+          </div>
+        </div>
+      </div>
+      <iframe
+        class="youtube"
+        src=""
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    `
     let advantagesContainer = document.querySelector(".advantages__container");
     advantagesContainer.innerHTML = "";
 
