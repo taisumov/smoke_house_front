@@ -11,11 +11,10 @@ async function loadData() {
   let data = await loadHeader();
   if (data) {
     let headerContainer = document
-    .querySelector(".header")
-    .querySelector(".headerContainer");
+      .querySelector(".header")
+      .querySelector(".headerContainer");
 
-    headerContainer.innerHTML = 
-    `
+    headerContainer.innerHTML = `
       <div class="headerContainer__logo">
         <img src="" alt="" class="logo" />
       </div>
@@ -23,35 +22,35 @@ async function loadData() {
         <div class="headerTitle"></div>
         <div class="headerDescription"></div>
       </div>
-    `
+    `;
 
     headerContainer.querySelector(".headerTitle").innerHTML = data["title"];
-    headerContainer.querySelector(".headerDescription").innerHTML = data["description"];
-    headerContainer.querySelector(".logo").src = baseUrl + "/media/" + data["image"];
+    headerContainer.querySelector(".headerDescription").innerHTML =
+      data["description"];
+    headerContainer.querySelector(".logo").src =
+      baseUrl + "/media/" + data["image"];
   }
 
   // Акции
   data = await loadSales();
   if (data) {
-    document.querySelector('.sales').innerHTML = 
-    `
+    document.querySelector(".sales").innerHTML = `
       <div class="salesContainer">
         <div class="salesImage">
           <img src="/img/main/SVG/salesText.svg" alt="" />
         </div>
         <div class="salesList"></div>
       </div>
-    `
+    `;
     let saleContainer = document.querySelector(".salesList");
     saleContainer.innerHTML = "";
     data.map((sale) => {
       let saleBox = document.createElement("div");
       saleBox.className = "sale";
-      saleBox.innerHTML = 
-      `
+      saleBox.innerHTML = `
         <img class="sale__fire" src="/img/main/SVG/fire.svg" alt="" />
         <div class="sale__text"></div>
-      `
+      `;
       saleBox.querySelector(".sale__text").innerHTML = sale;
       saleContainer.appendChild(saleBox);
     });
@@ -60,8 +59,7 @@ async function loadData() {
   // Преимущества
   data = await loadAdvantages();
   if (data) {
-    document.querySelector('.advantages').innerHTML = 
-    `
+    document.querySelector(".advantages").innerHTML = `
       <div class="advantages__title">ПРЕИМУЩЕСТВА</div>
       <div class="advantages__container">
         <div class="advantageBlock">
@@ -92,15 +90,14 @@ async function loadData() {
           </div>
         </div>
       </div>
-    `
+    `;
     let advantagesContainer = document.querySelector(".advantages__container");
     advantagesContainer.innerHTML = "";
 
     data.map((advantage) => {
       let advantageBlock = document.createElement("div");
       advantageBlock.className = "advantageBlock";
-      advantageBlock.innerHTML = 
-      `
+      advantageBlock.innerHTML = `
         <div class="advantageBlock__textContainer">
           <div class="advantageBlock__textContainer__title">
           </div>
@@ -119,10 +116,15 @@ async function loadData() {
             class="advantageBlock__imageContainer__img"
           />
         </div>
-      `
-      advantageBlock.querySelector(".advantageBlock__textContainer__title").innerHTML = advantage["title"];
-      advantageBlock.querySelector(".advantageBlock__textContainer__text").innerHTML = advantage["description"];
-      advantageBlock.querySelector(".advantageBlock__imageContainer__img").src = baseUrl + "/media/" + advantage["main_photo"];
+      `;
+      advantageBlock.querySelector(
+        ".advantageBlock__textContainer__title"
+      ).innerHTML = advantage["title"];
+      advantageBlock.querySelector(
+        ".advantageBlock__textContainer__text"
+      ).innerHTML = advantage["description"];
+      advantageBlock.querySelector(".advantageBlock__imageContainer__img").src =
+        baseUrl + "/media/" + advantage["main_photo"];
       advantagesContainer.appendChild(advantageBlock);
     });
   }
@@ -130,8 +132,9 @@ async function loadData() {
   // Видео
   data = await loadVideo();
   if (data) {
-    document.querySelector(".advantages").innerHTML = document.querySelector(".advantages").innerHTML + 
-    `
+    document.querySelector(".advantages").innerHTML =
+      document.querySelector(".advantages").innerHTML +
+      `
       <iframe
             class="youtube"
             src="${data}"
@@ -140,20 +143,19 @@ async function loadData() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
       ></iframe>
-    `
+    `;
   }
 
   // Форма
   data = await loadForm();
   if (data?.names.length) {
-    document.querySelector('.contactWithUs').innerHTML = 
-    `
+    document.querySelector(".contactWithUs").innerHTML = `
       <div class="contactWithUs__title">ОБРАТНЫЙ ЗВОНОК</div>
         <div class="contactWithUs__formContainer">
           <div class="formBlock"></div>
         </div>
       <div class="contactWithUs__orderButton"><span>Заказать</span></div>
-    `
+    `;
     let formContainer = document
       .querySelector(".contactWithUs")
       .querySelector(".formBlock");
@@ -172,7 +174,7 @@ async function loadData() {
       .querySelector(".contactWithUs__orderButton")
       .addEventListener("click", () => {
         sendEmail();
-    });
+      });
   }
 }
 
@@ -184,7 +186,7 @@ async function loadHeader() {
 
 async function loadSales() {
   return await host.get("/promo/").then((data) => {
-    console.log(data.data.promo)
+    console.log(data.data.promo);
     return data["data"]["promo"];
   });
 }
@@ -220,7 +222,11 @@ const sendEmail = async () => {
       ...dataSend,
       Дата: new Date().toLocaleString(),
     })
-    .then((data) => console.log("res", data));
+    .then((data) => {
+      console.log("res", data);
+      document.querySelector(".contactWithUs").style.display = "none";
+      document.querySelector(".order_success").style.display = "flex";
+    });
 };
 
 loadData();
