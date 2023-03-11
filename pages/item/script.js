@@ -146,6 +146,10 @@ const updatePhotos = async (links) => {
   });
 };
 
+const setPrice = (price) => {
+  document.querySelector('.order__price').innerHTML = price
+}
+
 const fetchData = async () => {
   await host.get("/item/get/" + slug).then((data) => {
     if (data.data === null) document.location.href="/";
@@ -157,6 +161,7 @@ const fetchData = async () => {
     setFeatures(data.data.features);
     setMaterial(data.data.material);
     setVideo(data.data.video);
+    setPrice(data.data.price);
   });
 };
 

@@ -383,6 +383,7 @@ body {
 }
 .container .item .info .extra-info .feature-container .feature .left__content {
   font-size: 14px;
+  word-break: break-all;
 }
 .container .item .info .extra-info .feature-container .feature__circle {
   font-family: "Raleway ExtraBold", serif;
