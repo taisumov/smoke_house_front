@@ -52,7 +52,7 @@ const renderCategory = (title, items) => {
   name.setAttribute("class", "name");
 
   let nameP = document.createElement("p");
-  nameP.innerText = title;
+  nameP.innerHTML = title;
 
   let logo = document.createElement("div");
   logo.setAttribute("class", "logo");
