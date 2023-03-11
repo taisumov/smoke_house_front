@@ -416,6 +416,11 @@ $hamburger-width: 30px;
     justify-content: center;
     align-items: center;
     .modal {
+      &::-webkit-scrollbar {
+        height: 0;
+        width: 0;
+        display: none;
+      }
       @media (max-width: 1199.98px) {
         width: 100% !important;
         height: 100%;
