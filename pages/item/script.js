@@ -147,7 +147,7 @@ const updatePhotos = async (links) => {
 };
 
 const setPrice = (price) => {
-  document.querySelector('.order__price').innerHTML = price
+  document.querySelector('.order__price').innerHTML = `${price} руб.`
 }
 
 const fetchData = async () => {
